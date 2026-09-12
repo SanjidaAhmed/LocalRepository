@@ -1,0 +1,23 @@
+#box1{
+    height: 100px;
+    width: 200px;
+    background-color: green;
+    font-size: 10px;
+}
+#box2{
+    height: 50%;
+    width: 30%;
+    background-color: yellow;
+    margin-left: 10%;
+    font-size: 2em;
+    /* 1 em = same as parent's font size */
+    /* 3 times of parent's font size */
+    /* 0.5 = half of parent's font size */
+    width: 5em;
+    /* font-size of the element itself, in the cas of "width" */
+    /* 
+        em = relative size
+        Here, font-size = 2 em = 20px;
+        width = 5 em = 20px * 5em = 100 px;
+    */
+}
