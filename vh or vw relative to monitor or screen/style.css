@@ -1,0 +1,22 @@
+#box1{
+    height: 100px;
+    width: 200px;
+    background-color: green;
+    font-size: 10px;
+}
+#box2{
+    height: 50vh;
+    /* vh = relative to 1% of viewport height.
+       vh covers, x percentage of height of browser's or screen
+       if we set, 100vh, it's height become as same as monitor screen.
+       It takes or consumes place from it's starting position to (height of monitor's..which can be last beyond monitor's height and may have to be scroll down)
+    */
+    /*
+       vw = relative to 1% of viewport width
+       same criteria as vh, applied for width
+    */
+    width: 70vw;
+    background-color: yellow;
+    margin-left: 10%;
+    font-size: 2em;
+}
