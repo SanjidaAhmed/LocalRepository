@@ -1,0 +1,113 @@
+div{
+    height: 100px;
+    width : 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#box1{
+    background-color: bisque;
+    /*
+    static - default position(The top, right, bottom,
+    left, and z-index properties have no effect)
+    */
+    position: static;
+    /* By default every div's position is set to static. */
+    /* 
+    if we set any other properties(like top, left, 
+    right) the position of this div will not gonna 
+    change as it set as static.
+    */
+}
+
+#box2{
+    background-color: goldenrod;
+    /* 
+    relative - element is relative to itself.(The
+    top, right, bottom, left, and z-index will work)
+    */
+    position: relative;
+    top: 20px;
+    left: 10px;
+    /* 
+    position: relative, it shift the div position 
+    according to properties(which set), relative to 
+    it's original position or where it should be before 
+    setting properties. 
+    */
+    /*
+    top: 10px -> shifted 10px towards down, from it's 
+    original position.
+
+    left: 10px -> shifted 10px towards right direction,
+    from it's original position.
+    */
+
+}
+
+#box3{
+   /* 
+   absolute - positioned relative to its closest 
+   positioned(non-static) ancestor. (removed from the flow)
+   */
+   position: absolute;
+   top: 500px;
+   left: 20px;
+   /*
+   Here, box3's <div>'s closest positioned ancestor is <body>
+   top: 10px -> Shifted 10px, down from <body> tag's starting
+   position.
+   when it's position set to absolute, it is removed
+   from document flow. that's why box4 takes place on box3's position.
+   */
+}
+
+#box4{
+    /*
+    fixed - position relative to browser. (removed from flow)
+    */
+    background-color: grey;
+    position:fixed;
+    right: 10px;
+    bottom: 0;/*we can set footer like this way */
+    width: 70vw;
+}
+
+#box5{
+    background-color: magenta;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+#box6{
+    /*positioned based on user scroll position*/
+    background-color: blueviolet;
+    position: sticky;
+    top:0;
+    /* It, fixed it's position(top:0) when, after user scroll down to it's previous or original position */
+}
+
+#box7{
+    background-color: coral;
+}
+#box8{
+    position: relative;
+    background-color: cornflowerblue;
+    left: -20px;
+    /* It shift's 20px towards right */
+    z-index: -1;
+    /* 
+    z-index decides the stack level of elements
+    Overlapping elements with a larger z-index cover those with a smaller one.
+    z-index: auto(0), that means it by default set to 0
+    z-index: ....-2, -1, 0, 1, 2....
+    
+    It comes from the concept of z-axis, (xyz cartesian axis)
+    
+    If, both div's z-index is similar, then, which is written first, comes below, while overlapping.
+    Otherwise, which z index is less, comes below, which z index is more, comes upper, all other div,
+    which index is less then it and overlapped by it;
+    */
+}
