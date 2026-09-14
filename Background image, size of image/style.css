@@ -1,0 +1,48 @@
+div{
+    height: 100px;
+    width : 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#box1{
+    /* unsplash.com for free photo */
+    background-image: url("palace_photo.jpeg");
+    /*
+    background-size: cover/ contain/ auto 
+    */
+    background-size: cover;
+    /* 
+    cover - photo almost fit on the box
+            no empty space remain.
+    */
+}
+
+#box2{
+    background-image: url("strawvery_photo.jpg");
+    background-size: contain;
+    /*
+    Here, complete photo must comes to the box.
+    Even, if it has to smaller the photo, as to fit.
+    But, can repeat according to the size of the div
+    */
+}
+
+#box3{
+    background-image: url("strawvery_photo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* If we set background repeat to no repeat, 
+       it will not repeat
+    */
+}
+
+#box4{
+    background-image: url("palace_photo.jpeg");
+    background-size: auto;
+    /*
+    auto - by default, how much photo can fit on the div, body, area,
+    according to photo's size.
+    */
+}
